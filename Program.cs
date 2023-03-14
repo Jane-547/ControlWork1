@@ -2,13 +2,13 @@
 StringKeyboard(UserArray);
 Console.Clear();
 System.Console.WriteLine("Начальный массив: ");
-Print(UserArray);
+System.Console.WriteLine(String.Join(" ", UserArray));
 int size = CountOfValues (UserArray);
 string [] resultArray = new string [size];
 ThreeDigitsArray(UserArray);
 System.Console.WriteLine();
 System.Console.WriteLine("Конечный массив: ");
-Print(resultArray);
+System.Console.WriteLine(String.Join(" ", resultArray));
 
 Console.ReadKey();
 
@@ -27,16 +27,6 @@ void StringKeyboard(string [] elements)  //  Метод заполнение о�
     {
         System.Console.WriteLine("Введите элемент: ");
         elements[i] = Console.ReadLine();
-    }
-    return;
-}
-
-void Print(string [] point)  //  Метод вывод в консоль одномерного массива
-{
-    int digit = point.Length;
-    for (int count = 0; count < digit; count++)
-    {
-        System.Console.Write(point[count] + " ");
     }
     return;
 }
